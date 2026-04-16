@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore | Repuestos y Servicio Técnico</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="neon-text">TECH</span>STORE
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" data-target="home" class="active">Inicio</a></li>
+            <li><a href="#" data-target="catalogo">Catálogo</a></li>
+            <li><a href="#" data-target="servicios">Servicios</a></li>
+            <li><a href="#" data-target="turnos">Mis Turnos</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTAINER PRINCIPAL DONDE SE CARGAN LAS VISTAS DINÁMICAMENTE -->
+    <main id="app-content">
+        <!-- VISTA DE INICIO -->
+        <section id="home" class="view active">
+            <div class="hero">
+                <h1>El Rendimiento que <span class="neon-text">Mereces</span></h1>
+                <p>Especialistas en Armado de PCs de Alto Rendimiento, Reparaciones Extremas y Componentes Premium.</p>
+                <button class="btn-primary" onclick="window.app.navigate('catalogo')">Ver Catálogo</button>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Atención Especializada</h3>
+                    <p>Técnicos certificados para el cuidado de tu hardware.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Garantía de Calidad</h3>
+                    <p>Los mejores componentes del mercado con garantía oficial.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Seguimiento en Vivo</h3>
+                    <p>Revisa el estado de tu equipo en reparación con tu código.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISTA DE CATÁLOGO -->
+        <section id="catalogo" class="view">
+            <h2 class="section-title">Catálogo de <span class="neon-text">Ventas</span></h2>
+            
+            <div class="catalog-container">
+                <h3>PCs Armadas</h3>
+                <div id="pcs-grid" class="cards-grid">
+                    <!-- Cards se llenan con JS -->
+                    <div class="loader"></div>
+                </div>
+
+                <h3>Componentes y Repuestos</h3>
+                <div id="repuestos-grid" class="cards-grid">
+                    <!-- Cards se llenan con JS -->
+                    <div class="loader"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISTA DE SERVICIOS -->
+        <section id="servicios" class="view">
+            <h2 class="section-title">Nuestros <span class="neon-text">Servicios</span></h2>
+            <div id="servicios-grid" class="cards-grid">
+                <!-- Cards se llenan con JS -->
+                <div class="loader"></div>
+            </div>
+        </section>
+
+        <!-- VISTA DE TURNOS/SEGUIMIENTO -->
+        <section id="turnos" class="view">
+            <h2 class="section-title">Estado de tu <span class="neon-text">Reparación</span></h2>
+            <div class="turnos-container">
+                <div class="search-box">
+                    <p>Ingresa el código proporcionado al momento de dejar tu equipo (Ej: TECH-001)</p>
+                    <div class="input-group">
+                        <input type="text" id="turnoId" placeholder="Código de Turno...">
+                        <button class="btn-primary" onclick="window.app.verificarTurno()">Consultar</button>
+                    </div>
+                    <div id="turno-result" class="result-box hidden">
+                        <!-- Detalles del turno por JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechStore Emprendimiento. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
