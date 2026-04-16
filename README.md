@@ -1,3 +1,7 @@
+Esta pagina web trata sobre el emprendimiento que estoy haciendo sobre mis servicios y productos que estoy vendiendo y ofreciendo. Esta en desarollo y mas pq tengo que aprender react para poder modificar el codigo que me dio gemini pro
+
+
+interfaz:
 Pagina principal:
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/cf86c711-bf45-44e8-b820-78aae6808e0a" />
 Catalogo:
